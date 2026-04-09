@@ -44,3 +44,6 @@ class Dev(commands.Cog):
         await interaction.response.defer(ephemeral=True)
         await self.bot.tree.sync()
         await interaction.followup.send("Tree synced!")
+        
+async def setup(bot):
+    await bot.add_cog(Dev(bot))
