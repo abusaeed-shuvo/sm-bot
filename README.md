@@ -29,4 +29,5 @@ A scalable Discord bot template using slash commands.
 
 ## Commands
 
-/user → Get user info
+/user -> Get user info
+/avatar -> Get user's avatar

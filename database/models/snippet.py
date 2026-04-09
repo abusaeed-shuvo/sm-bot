@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Text
-from database.db import Base
+from database.base import Base
 
 class Snippet(Base):
     __tablename__ = "snippets"
