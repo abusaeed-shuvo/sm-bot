@@ -210,4 +210,5 @@ __marimo__/
 *.db
 
 # Custom bot logs
+logs/
 *.log*
