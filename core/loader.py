@@ -1,4 +1,6 @@
+import logging
 from pathlib import Path
+logger = logging.getLogger(__name__)
 
 async def load_extensions(bot):
     for path in Path("cogs").rglob("*.py"):
@@ -8,3 +10,4 @@ async def load_extensions(bot):
         module = ".".join(path.with_suffix("").parts)
 
         await bot.load_extension(module)
+        logger.info(f"Loaded extension: {module}")

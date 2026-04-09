@@ -5,14 +5,15 @@ from database.repository.snippet_repo import (
     list_snippets
 )
 
-def add_snippet(db, name, content, author_id):
-    return create_snippet(db, name, content, author_id)
+# Note: These are now all async functions
+async def add_snippet(db, name, content, author_id):
+    return await create_snippet(db, name, content, author_id)
 
-def fetch_snippet(db, name):
-    return get_snippet(db, name)
+async def fetch_snippet(db, name):
+    return await get_snippet(db, name)
 
-def remove_snippet(db, name):
-    return delete_snippet(db, name)
+async def remove_snippet(db, name):
+    return await delete_snippet(db, name)
 
-def fetch_all_snippets(db):
-    return list_snippets(db)
+async def fetch_all_snippets(db):
+    return await list_snippets(db)
