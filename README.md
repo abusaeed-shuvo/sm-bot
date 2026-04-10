@@ -1,9 +1,7 @@
-![Python](https://img.shields.io/badge/Python_3.11+-cba6f7?style=for-the-badge&logo=python&logoColor=1e1e2e)
-![discord.py](https://img.shields.io/badge/discord.py-89b4fa?style=for-the-badge&logo=discord&logoColor=1e1e2e)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-ORM-f38ba8?style=for-the-badge)
-![uv](https://img.shields.io/badge/uv-fast_env-a6e3a1?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-f9e2af?style=for-the-badge)
-# sm-bot
+# SM-Bot
+
+![Python](https://img.shields.io/badge/Python_3.11+-cba6f7?style=for-the-badge&logo=python&logoColor=1e1e2e) ![discord.py](https://img.shields.io/badge/discord.py-89b4fa?style=for-the-badge&logo=discord&logoColor=1e1e2e) ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-ORM-f38ba8?style=for-the-badge) ![uv](https://img.shields.io/badge/uv-fast_env-a6e3a1?style=for-the-badge) ![License](https://img.shields.io/badge/license-MIT-f9e2af?style=for-the-badge)
+
 Scalar Modular Discord Bot for easy modification and deployment
 
 A scalable Discord bot template using slash commands and modular architecture.
@@ -43,7 +41,7 @@ A scalable Discord bot template using slash commands and modular architecture.
 - `/snippet` -> Manage text snippets (grouped commands).
 
 ## Project Structure
-   This bot uses a structured design for better maintainability:
+This bot uses a structured design for better maintainability:
 
 - `cogs/`: Command logic and listeners.
 
@@ -59,6 +57,8 @@ Create a `.env` file based on `.env.example`:
 
 ```env
 DISCORD_TOKEN=your_bot_token_here
+OWNER_ID=your_discord_id
+GUILD_ID=your_discord_server_id
 DATABASE_URL=your_database_url_here
 ```
 
@@ -95,11 +95,11 @@ Example:
 from discord.ext import commands
 
 class Example(commands.Cog):
-   def __init__(self, bot):
-      self.bot = bot
+    def __init__(self, bot):
+        self.bot = bot
 
 async def setup(bot):
-   await bot.add_cog(Example(bot))
+    await bot.add_cog(Example(bot))
 ```
 
 The bot will automatically load all cogs at startup.
